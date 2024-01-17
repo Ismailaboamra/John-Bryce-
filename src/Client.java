@@ -177,7 +177,7 @@ public abstract class Client {
         return idClient;
     }
 
-    private String accounts_str()
+    public String accounts_str()
     {
         String str = "[";
         for (Account account:getAccounts()) {
