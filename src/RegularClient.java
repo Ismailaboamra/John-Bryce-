@@ -28,7 +28,7 @@ public class RegularClient extends Client{
 
     @Override
     public String toString() {
-        return "Client{" +
+        return "RegularClient{" +
                 "idClient=" + super.getIdClient() +
                 ", lastName='" + super.getLastName() + '\'' +
                 ", firstName='" + super.getFirstName() + '\'' +
