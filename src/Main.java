@@ -99,6 +99,28 @@ public class Main {
         gold3.addAccount(a30);
         gold3.fullReport();
 
+        Client platinum1 = new PlatinumClient(311, "Zinger", "Ron");
+        platinum1.addAccount(a31);
+        platinum1.addAccount(a32);
+        platinum1.addAccount(a33);
+        platinum1.addAccount(a34);
+        platinum1.addAccount(a35);
+        platinum1.fullReport();
+        Client platinum2 = new PlatinumClient(312, "Ben Ari", "Matan");
+        platinum2.addAccount(a36);
+        platinum2.addAccount(a37);
+        platinum2.addAccount(a38);
+        platinum2.addAccount(a39);
+        platinum2.addAccount(a40);
+        platinum2.fullReport();
+        Client platinum3 = new PlatinumClient(313, "Yedid", "Liat");
+        platinum3.addAccount(a41);
+        platinum3.addAccount(a42);
+        platinum3.addAccount(a43);
+        platinum3.addAccount(a44);
+        platinum3.addAccount(a45);
+        platinum3.fullReport();
+
 
     }
 }

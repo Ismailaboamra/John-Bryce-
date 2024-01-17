@@ -22,7 +22,7 @@ public abstract class Client {
                 ", lastName='" + lastName + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", accounts=" + accounts_str() +
-                ", commissionRate=" + commissionRate +
+                ", commissionRate=" +  commissionRate +
                 ", interestRate=" + interestRate +
                 '}';
     }
