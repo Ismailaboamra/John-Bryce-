@@ -77,6 +77,28 @@ public class Main {
         regular3.addAccount(a15);
         regular3.fullReport();
 
+        Client gold1 = new GoldClient(211, "Neri", "Berrie");
+        gold1.addAccount(a16);
+        gold1.addAccount(a17);
+        gold1.addAccount(a18);
+        gold1.addAccount(a19);
+        gold1.addAccount(a20);
+        gold1.fullReport();
+        Client gold2 = new GoldClient(212, "Meir", "Golda");
+        gold2.addAccount(a21);
+        gold2.addAccount(a22);
+        gold2.addAccount(a23);
+        gold2.addAccount(a24);
+        gold2.addAccount(a25);
+        gold2.fullReport();
+        Client gold3 = new GoldClient(213, "Ben Yehuda", "Miri");
+        gold3.addAccount(a26);
+        gold3.addAccount(a27);
+        gold3.addAccount(a28);
+        gold3.addAccount(a29);
+        gold3.addAccount(a30);
+        gold3.fullReport();
+
 
     }
 }
