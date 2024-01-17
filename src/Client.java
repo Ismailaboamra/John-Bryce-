@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Client {
+public abstract class Client {
     private static final int MAX_SIZE = 5;
     private int idClient;
     private String lastName;
     private String firstName;
     private final List<Account> accounts = new ArrayList<Account>();
-    double commissionRate;
-    double interestRate;
+    protected double commissionRate;
+    protected double interestRate;
 
     @Override
     public boolean equals(Object obj) {
@@ -38,12 +38,28 @@ public class Client {
 
     public void addAccount(Account account)
     {
-        //todo - not implemented yet
+
+        if(getAccounts().size() == MAX_SIZE)
+        {
+            System.out.println("there is no space for new account.");
+        } else if (findAccountById(account.getAccountid()) != null) {
+            System.out.println("Account id already exist.");
+        }
+        getAccounts().add(account);
+        System.out.println("Account added successfully.");
+
+
     }
 
     public void removeAccount(Account account)
     {
-        //todo - not implemented yet
+
+        if (findAccountById(account.getAccountid()) != null){
+            getAccounts().remove(account);
+            System.out.println("Account removed successfull.");
+        }else {
+            System.out.println("Account does not exis.");
+        }
 
     }
 
@@ -58,12 +74,28 @@ public class Client {
 
     public void deposit(Account account,double amount)
     {
-        //todo - not implemented yet
+        if (findAccountById(account.getAccountid()) != null)
+        {
+            account.setBalance(account.getBalance() + amount + amount*getCommissionRate());
+            System.out.println("Deposit successfully.");
+        }else {
+            System.out.println("Account does not exis.");
+        }
     }
 
     public void withdraw(Account account,double amount)
     {
-        //todo - not implemented yet
+        if (findAccountById(account.getAccountid()) != null)
+        {
+            if (account.getBalance() >= (amount + amount*getCommissionRate())){
+                account.setBalance(account.getBalance() - (amount + amount*getCommissionRate()));
+                System.out.println("Withdraw successfully.");
+            }else {
+                System.out.println("“No Overdraft");
+            }
+        }else {
+            System.out.println("Account does not exist.");
+        }
     }
 
     public double getFortune()
@@ -77,8 +109,30 @@ public class Client {
 
     public void autoUpdateAccount()
     {
-        //todo - not implemented yet
+        for (Account account:getAccounts()) {
+            account.setBalance(account.getBalance() - account.getBalance()*getInterestRate());
+        }
     }
+
+    public String getFullName()
+    {
+        return getFirstName() + " " + getLastName();
+    }
+
+    public void fullReport()
+    {
+        System.out.println("------------------------------------------------");
+        System.out.println("Full Report About the Client :");
+        System.out.println("Client ID : " + getIdClient());
+        System.out.println("Full Name : " + getFullName());
+        System.out.println("Commission Rate : " + getCommissionRate());
+        System.out.println("Interest Rate : " + getInterestRate());
+        System.out.println("Client Type : ");
+        System.out.println("------------------------------------------------");
+
+    }
+
+    public abstract void draw();
     public void setInterestRate(double interestRate) {
         this.interestRate = interestRate;
     }

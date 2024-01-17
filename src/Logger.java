@@ -2,8 +2,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Logger {
+    private static Logger instance;
+
     static final private List<Log> logs = new ArrayList<>();
-    public Logger() {
+    private Logger() {
+    }
+    public static Logger getInstance()
+    {
+        if(instance == null)
+        {
+            instance = new Logger();
+        }
+        return instance;
     }
     public static List<Log> getLogs(){
         return logs;
