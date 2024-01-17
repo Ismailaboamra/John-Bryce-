@@ -11,6 +11,9 @@ public class Main {
         Account a5 = new Account(555, 6000);
 
         Client client1 = new Client(123, "Cohen", "Roni", 2.5, 7);
+
+        Bank bank = new Bank();
+
         client1.addAccount(a1);
         client1.addAccount(a2);
         client1.addAccount(a3);
@@ -33,6 +36,9 @@ public class Main {
         System.out.println(a5);
 
         System.out.println(client1);
+
+        System.out.println(bank);
+
 
 
 

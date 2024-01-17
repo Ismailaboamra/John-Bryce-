@@ -68,7 +68,7 @@ public class Client {
 
     public double getFortune()
     {
-        int sum = 0;
+        double sum = 0;
         for (Account account : accounts) {
             sum += account.getBalance();
         }
