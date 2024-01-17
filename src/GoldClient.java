@@ -6,6 +6,11 @@ public class GoldClient extends Client{
 
     @Override
     public void draw() {
-
+        System.out.println("  ####   ##   ##  #####");
+        System.out.println(" #      #  # #  #   #");
+        System.out.println("  ####  #   #   #   #");
+        System.out.println("      # ##### ##### #");
+        System.out.println(" #    # #   # #   # #");
+        System.out.println("  ####  #   # #   # #");
     }
 }
