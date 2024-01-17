@@ -10,6 +10,13 @@ public class Main {
         Account a4 = new Account(444, 10_000);
         Account a5 = new Account(555, 6000);
 
+        Client client1 = new Client(123, "Cohen", "Roni", 2.5, 7);
+        client1.addAccount(a1);
+        client1.addAccount(a2);
+        client1.addAccount(a3);
+        client1.addAccount(a4);
+        client1.addAccount(a5);
+
 
         System.out.println(l1);
         System.out.println(l2);
@@ -24,6 +31,9 @@ public class Main {
         System.out.println(a3);
         System.out.println(a4);
         System.out.println(a5);
+
+        System.out.println(client1);
+
 
 
 
